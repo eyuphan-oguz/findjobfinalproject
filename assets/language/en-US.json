@@ -1,0 +1,15 @@
+{
+  "getStartedTextTitle":"Find a Perfect Job Match",
+  "buttonStartedText":"Let's Get Started",
+  "getStartedTextDescription": "Finding your dream job is more easire,and faster with JobHub",
+  "emailHintText": "Email Address",
+  "passwordHintText": "Password",
+  "loginPageTitle": "Welcome Back!",
+  "loginPageDescription": "Fill your details or continue with social media",
+  "loginForgotPasswordText": "Forgot Password?",
+  "loginPageButtonText": "LOG IN",
+  "loginPageContinueWithText": "Or Continue with",
+  "loginPageCreateUserText": "New User?",
+  "loginPageCreateUserTextButton": "Create Account"
+
+}
