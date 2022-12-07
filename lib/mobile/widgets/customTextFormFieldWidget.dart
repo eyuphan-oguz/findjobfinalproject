@@ -1,3 +1,4 @@
+import 'package:findjobfinalproject/mobile/constant/projectIcon.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormFieldWidget extends StatefulWidget {
@@ -48,8 +49,8 @@ class _CustomTextFormFieldWidgetState extends State<CustomTextFormFieldWidget> {
                     _toggle();
                   },
                   child: _obscureText
-                      ? Icon(Icons.visibility_off)
-                      : Icon(Icons.visibility))
+                      ? ProjectIcon.visibleOffIcon
+                      : ProjectIcon.visibleOnIcon)
                   : null,
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide.none,

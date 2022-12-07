@@ -20,6 +20,11 @@ class LocaleConstants{
   static String loginPageContinueWithText="loginPageContinueWithText".myLocale;
   static String loginPageCreateUserText="loginPageCreateUserText".myLocale;
   static String loginPageCreateUserTextButton="loginPageCreateUserTextButton".myLocale;
+  static String registerPageTitle="registerPageTitle".myLocale;
+  static String registerPageDescription="registerPageDescription".myLocale;
+  static String usernameHintText="usernameHintText".myLocale;
+  static String registerPageHaveAccountText="registerPageHaveAccountText".myLocale;
+  static String registerPageHaveAccountTextButton="registerPageHaveAccountTextButton".myLocale;
 
 }
 

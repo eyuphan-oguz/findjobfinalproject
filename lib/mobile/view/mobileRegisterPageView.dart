@@ -4,7 +4,6 @@ import 'package:findjobfinalproject/mobile/constant/projectColor.dart';
 import 'package:findjobfinalproject/mobile/constant/projectIcon.dart';
 import 'package:findjobfinalproject/mobile/constant/projectPadding.dart';
 import 'package:findjobfinalproject/mobile/constant/projectTextStyle.dart';
-import 'package:findjobfinalproject/mobile/view/mobileRegisterPageView.dart';
 import 'package:findjobfinalproject/mobile/widgets/customContinueWithTextWidget.dart';
 import 'package:findjobfinalproject/mobile/widgets/customRoundedCornersButtonWidget.dart';
 import 'package:findjobfinalproject/mobile/widgets/customSocialMediaButtonWidget.dart';
@@ -12,21 +11,22 @@ import 'package:findjobfinalproject/mobile/widgets/customTextButtonWidget.dart';
 import 'package:findjobfinalproject/mobile/widgets/customTextFormFieldWidget.dart';
 import 'package:flutter/material.dart';
 
-class MobileLoginPageView extends StatefulWidget {
-  const MobileLoginPageView({Key? key}) : super(key: key);
+
+class MobileRegisterPageView extends StatefulWidget {
+  const MobileRegisterPageView({Key? key}) : super(key: key);
 
   @override
-  State<MobileLoginPageView> createState() => _MobileLoginPageViewState();
+  State<MobileRegisterPageView> createState() => _MobileRegisterPageViewState();
 }
+TextEditingController emailController=TextEditingController();
+TextEditingController passwordController=TextEditingController();
 
-class _MobileLoginPageViewState extends State<MobileLoginPageView> {
-  TextEditingController emailController=TextEditingController();
-  TextEditingController passwordController=TextEditingController();
-
+class _MobileRegisterPageViewState extends State<MobileRegisterPageView> {
   @override
   Widget build(BuildContext context) {
     Size size=MediaQuery.of(context).size;
-    return SafeArea(
+
+    return  SafeArea(
       child: Scaffold(
         body: Padding(
           padding: ProjectPadding.padding,
@@ -35,14 +35,15 @@ class _MobileLoginPageViewState extends State<MobileLoginPageView> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                LocaleConstants.loginPageTitle,
+                LocaleConstants.registerPageTitle,
                 style: ProjectTextStyle.headline3,
               ),
-              Text(LocaleConstants.loginPageDescription,
+              Text(LocaleConstants.registerPageDescription,
                   style: ProjectTextStyle.subTitle1.copyWith(height: 1.8)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
+                  CustomTextFormFieldWidget(hintText: LocaleConstants.usernameHintText, isPasswordField: false, controller: emailController, type: TextInputType.text, size: size, icon: ProjectIcon.personIcon, visible: false,),
                   CustomTextFormFieldWidget(hintText: LocaleConstants.emailHintText, isPasswordField: false, controller: emailController, type: TextInputType.emailAddress, size: size, icon: ProjectIcon.emailIcon, visible: false,),
                   CustomTextFormFieldWidget(hintText: LocaleConstants.passwordHintText, isPasswordField: true, controller: passwordController, type: TextInputType.text, size: size, icon: ProjectIcon.passwordIcon, visible: true,),
                   CustomTextButtonWidget(text: LocaleConstants.loginForgotPasswordText, onPressed: (){}, textStyle: ProjectTextStyle.caption,),
@@ -54,15 +55,15 @@ class _MobileLoginPageViewState extends State<MobileLoginPageView> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                CustomSocialMediaButtonWidget(imagePath: 'assets/images/google.png', onPressed: (){context.setLocale(LocaleConstants.enLocale);}, size: size,),
-                CustomSocialMediaButtonWidget(imagePath: 'assets/images/facebook.png', onPressed: (){context.setLocale(LocaleConstants.trLocale);}, size: size,),
-              ],),
+                  CustomSocialMediaButtonWidget(imagePath: 'assets/images/google.png', onPressed: (){context.setLocale(LocaleConstants.enLocale);}, size: size,),
+                  CustomSocialMediaButtonWidget(imagePath: 'assets/images/facebook.png', onPressed: (){context.setLocale(LocaleConstants.trLocale);}, size: size,),
+                ],),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(LocaleConstants.loginPageCreateUserText,style: ProjectTextStyle.bodyText
+                  Text(LocaleConstants.registerPageHaveAccountText,style: ProjectTextStyle.bodyText
                       .copyWith(color: ProjectColor.tertiary),),
-                  CustomTextButtonWidget(text: LocaleConstants.loginPageCreateUserTextButton, onPressed: (){Navigator.push(context, MaterialPageRoute(builder:(context)=> MobileRegisterPageView()));}, textStyle: ProjectTextStyle.headline8.copyWith(fontSize: 16))
+                  CustomTextButtonWidget(text: LocaleConstants.registerPageHaveAccountTextButton, onPressed: (){}, textStyle: ProjectTextStyle.headline8.copyWith(fontSize: 16))
                 ],
               )
 
@@ -74,4 +75,3 @@ class _MobileLoginPageViewState extends State<MobileLoginPageView> {
     );
   }
 }
-

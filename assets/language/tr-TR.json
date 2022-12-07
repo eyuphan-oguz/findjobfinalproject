@@ -4,13 +4,18 @@
   "getStartedTextDescription": "JobHub ile hayalinizdeki işi bulmak,daha hızlı ve daha kolay",
   "emailHintText": "Email",
   "passwordHintText": "Şifre",
+  "usernameHintText": "Kullanıcı adı",
   "loginPageTitle": "Tekrar Hoşgeldiniz!",
   "loginPageDescription": "Bilgilerinizi doldurun veya sosyal medya ile devam edin",
   "loginForgotPasswordText": "Şifremi unuttum?",
   "loginPageButtonText": "GİRİŞ YAP",
   "loginPageContinueWithText": "Veya",
   "loginPageCreateUserText": "Hesabın yok mu?",
-  "loginPageCreateUserTextButton": "Hemen Kaydol"
+  "loginPageCreateUserTextButton": "Hemen Kaydol",
+  "registerPageTitle": "Hesap oluştur",
+  "registerPageDescription": "Bilgilerinizi doldurun veya sosyal medya ile devam edin",
+  "registerPageHaveAccountText": "Zaten hesabınız var mı?",
+  "registerPageHaveAccountTextButton": "Giriş yapın"
 
 
 
